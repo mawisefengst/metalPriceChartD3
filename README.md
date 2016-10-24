@@ -1,6 +1,6 @@
  "#metalPriceChartD3" 
  
- +Please check live demo: https://svgreactwebpack.herokuapp.com/
+ +Please check live demo: https://metalpricechartd3.herokuapp.com/
 
 ```bash
 
