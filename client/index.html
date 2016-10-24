@@ -1,0 +1,221 @@
+<html>
+<head>
+	<title>React Redux On Webpack</title>
+	<link rel="stylesheet" type="text/css" href="styles/d3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type='text/javascript' src='http://underscorejs.org/underscore.js'></script>
+	<script type='text/javascript' src='//d3js.org/d3.v3.min.js?ver=4.6.1'></script>
+	<script type='text/javascript' src='d3.js'></script>
+</head>
+<body>
+	
+
+	<div id="home_markets" class="homeblock">
+	<h1 class="hdbar">Metal Market Charts</h1>
+	<div id="marketcharts">
+			<ul class="tabs-mkt">
+				<li class="current"><a targettab="#mkt_al" id="mkt_al_tab">Aluminum Cash $/lb</a></li>
+				<li><a targettab="#mkt_cop" id="mkt_cop_tab">Copper Cash $/lb</a></li>
+				<li><a targettab="#mkt_gold" id="mkt_gold_tab">Gold $/oz t</a></li>
+				<li><a targettab="#mkt_lead" id="mkt_lead_tab">Lead Cash $/lb</a></li>
+				<li><a targettab="#mkt_nickel" id="mkt_nickel_tab">Nickel Cash $/lb</a></li>
+				<li><a targettab="#mkt_silver" id="mkt_silver_tab">Silver $/oz t</a></li>
+				<li><a targettab="#mkt_tin" id="mkt_tin_tab">Tin Cash $/lb</a></li>
+				<li><a targettab="#mkt_zinc" id="mkt_zinc_tab">Zinc $/lb</a></li>
+			</ul>
+			<div class="mkttab">
+
+				<div id="mkt_al" class="mkttab-content" style="position:relative; display:block;">
+					
+
+					<h1>
+						Aluminum - London metal exchange $/LB 
+						<span class="notationTxt">24 Hour feed delay LME Cash Prices</span>
+					</h1>
+
+
+
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="al">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="al">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="al">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+				</div>
+
+				<div id="mkt_cop" class="mkttab-content">
+					<h1>Copper - COMEX $/LB <span class="notationTxt">24 Hour feed delay</span></h1>
+
+					<!--
+					<div class="mktinfo">
+						<a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=cu&type=L&weight=LB&days=1&size=M&bg=&cs=4&cid=0' ></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=cu&type=L&weight=LB&days=3&size=M&bg=&cs=4&cid=0' ></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=cu&type=L&weight=LB&days=6&size=M&bg=&cs=4&cid=0' ></a>
+					</div>-->
+					
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="cu">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="cu">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="cu">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>
+
+				</div>
+
+				<div id="mkt_gold" class="mkttab-content">
+					<h1>Gold - COMEX $/oz t<span class="notationTxt">24 Hour feed delay</span></h1>
+					<!--
+					<div class="mktinfo"> <a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=au lon&type=V&weight=LB&days=1&size=M&bg=&cs=4&cid=0' ></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=au lon&type=V&weight=LB&days=3&size=M&bg=&cs=4&cid=0' ></a> <a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=au lon&type=V&weight=LB&days=6&size=M&bg=&cs=4&cid=0' ></a>
+					</div>-->
+					
+
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="au">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="au">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="au">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>
+
+
+				</div>
+
+				<div id="mkt_lead" class="mkttab-content">
+					<h1>Lead - London metal exchange $/lb <span class="notationTxt">24 Hour feed delay LME Cash Prices</span></h1>
+					<!--
+					<div class="mktinfo">
+						<a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=pb lme&type=L&weight=LB&days=1&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=pb lme&type=L&weight=LB&days=3&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=pb lme&type=L&weight=LB&days=6&size=M&bg=&cs=4&cid=0'></a>
+					</div>-->
+					
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="pb">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="pb">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="pb">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div> 
+
+				</div>	
+
+				<div id="mkt_nickel" class="mkttab-content">
+					<h1>Nickel - London metal exchange $/lb <span class="notationTxt">24 Hour feed delay LME Cash Prices</span></h1>
+					<!--
+					<div class="mktinfo">
+						<a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=ni lme&type=L&weight=LB&days=1&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=ni lme&type=L&weight=LB&days=3&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=ni lme&type=L&weight=LB&days=6&size=M&bg=&cs=4&cid=0'></a>
+					</div>-->
+				
+
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="ni">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="ni">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="ni">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div> 
+
+				</div>	
+
+				<div id="mkt_silver" class="mkttab-content">
+					<h1>Silver - comex $/oz t<span class="notationTxt">24 Hour feed delay</span></h1>
+					<!--
+					<div class="mktinfo">
+						<a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=ag lon&type=V&weight=LB&days=1&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=ag lon&type=V&weight=LB&days=3&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=ag lon&type=V&weight=LB&days=6&size=M&bg=&cs=4&cid=0'></a>
+					</div>
+					-->
+
+
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="ag">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="ag">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="ag">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>
+
+				</div>	
+
+				<div id="mkt_tin" class="mkttab-content">
+					<h1>Tin - London metal exchange $/lb <span class="notationTxt">24 Hour feed delay LME Cash Prices</span></h1>
+					<!--
+					<div class="mktinfo">
+						<a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=sn lme&type=L&weight=LB&days=1&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=sn lme&type=L&weight=LB&days=3&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=sn lme&type=L&weight=LB&days=6&size=M&bg=&cs=4&cid=0'></a>
+					</div>
+					-->
+
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="sn">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="sn">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="sn">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>
+
+				</div>	
+
+				<div id="mkt_zinc" class="mkttab-content">
+					<h1>Zinc - London metal exchange $/lb <span class="notationTxt">24 Hour feed delay LME Cash Prices</span></h1>
+					<!--
+					<div class="mktinfo">
+						<a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=zn lme&type=L&weight=LB&days=1&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=zn lme&type=L&weight=LB&days=3&size=M&bg=&cs=4&cid=0'></a><a class="chart" href='http://metalprices.com/' target='_BLANK'><img src='http://metalprices.com/PubCharts/PublicCharts.aspx?metal=zn lme&type=L&weight=LB&days=6&size=M&bg=&cs=4&cid=0'></a>
+					</div>
+					-->
+
+					<div class="visualisationWrapper" data-timeInterval="30" data-metal="zn">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	 
+
+					<div class="visualisationWrapper" data-timeInterval="90" data-metal="zn">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>	
+
+					<div class="visualisationWrapper" data-timeInterval="180" data-metal="zn">
+						<svg class="visualisation" width="250" height="200"></svg>
+					</div>
+
+				</div>
+
+				<div class="chartdate">30 days</div><div class="chartdate">90 days</div><div class="chartdate">6 months</div>
+			</div>	
+	
+
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
